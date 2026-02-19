@@ -408,7 +408,8 @@ public abstract class BaseNekoSettingsActivity extends BaseFragment {
             return;
         }
 
-        iBlur3PositionActionBar.set(0, 0, fragmentView.getMeasuredWidth(), actionBar.getMeasuredHeight());
+        final int additionalList = AndroidUtilities.dp(48);
+        iBlur3PositionActionBar.set(0, -additionalList, fragmentView.getMeasuredWidth(), actionBar.getMeasuredHeight() + additionalList);
 
         scrollableViewNoiseSuppressor.setupRenderNodes(iBlur3Positions, 1);
         scrollableViewNoiseSuppressor.invalidateResultRenderNodes(iBlur3Capture, fragmentView.getMeasuredWidth(), fragmentView.getMeasuredHeight());
