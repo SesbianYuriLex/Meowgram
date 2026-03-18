@@ -14295,7 +14295,7 @@ public class ChatActivityEnterView extends FrameLayout implements
             if (getAlpha() <= 0f) { // for accessibility
                 return false;
             }
-            if (event.getAction() == MotionEvent.ACTION_DOWN && (event.getX() < getWidth() - width() || event.getY() < getHeight() - height())) {
+            if (event.getAction() == MotionEvent.ACTION_DOWN && (event.getX() < getWidth() - width() || event.getY() < getHeight() - height()) && !isAccessibilityFocused()) {
                 return false;
             }
             return super.onTouchEvent(event);
